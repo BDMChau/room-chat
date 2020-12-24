@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clock {
+  position: absolute;
+  top: 70px;
+  right: 0px;
+}
+
+.clock .time {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 0;
+  margin-right: 20px;
+}
+
+.clock .time div {
+  position: relative;
+}
+
+.clock .time div span {
+  position: relative;
+  display: block;
+  color: #33322c;
+  font-family: "Segoe UI";
+  width: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  height: 100%;
+}
+
+/*//////////*/
+.clock .date {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0;
+  margin-right: 32px;
+}
+
+.clock .date span {
+  position: relative;
+  display: block;
+  color: #33322cf0;
+  font-family: Avenir_Book;
+  width: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 100%;
+}
+
+.clock .date .month {
+  margin: 0 19px 0 0;
+}

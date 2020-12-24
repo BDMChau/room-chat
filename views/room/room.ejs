@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/room.css">
+  <link rel="stylesheet" href="stylesheets/clock.css">
+  <title>Chat Box</title>
+</head>
+
+<body>
+  <main>
+    <div class="wrap">
+      <div class="clock">
+        <div class="time">
+          <div>
+            <span class="hour"> </span>
+          </div>
+          <div>
+            <span class="minute"> </span>
+          </div>
+          <div>
+            <span class="second"> </span>
+          </div>
+        </div>
+        <div class="date">
+          <span class="day2"> </span>
+          <span class="month"> </span>
+          <span class="year"> </span>
+        </div>
+      </div>
+      <div class="leave-btn">
+        <a href="/">Leave Room</a>
+      </div>
+      <div class="message container">
+        <div class="row">
+          <div class="info">
+            <div class="info-box">
+              <form class="info-send" action="/<%= roomName %>" method="POST">
+                <input class="info-input" value="<%= newUserName%>" name="newUserName" type="text"
+                  placeholder="Your nickname... (type this first!)" maxlength="32" type="submit" required>
+              </form>
+            </div>
+          </div>
+          <div class="message-box">
+            <!-- message -->
+
+          </div>
+          <form class="message-send">
+            <input class="message-input" type="text" placeholder="Type a message..." />
+            <button class="message-button" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+  <script src="javascripts/index.js"></script>
+  <script src="javascripts/clock.js"></script>
+  <script>
+    const roomName = "<%= roomName %>"
+    const newUserName = "<%= newUserName%>"
+    console.log(newUserName);
+    console.log(roomName);
+  </script>
+</body>
+
+</html>
